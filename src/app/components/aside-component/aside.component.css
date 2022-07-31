@@ -1,0 +1,101 @@
+.aside {
+  border-right: 1px solid rgba(130, 140, 150, 0.1);
+  overflow-y: auto;
+  /*
+    animation: normal 1000ms ease-in;
+    animation-name: slidein;
+    animation-fill-mode: forwards;*/
+}
+
+aside.disable {
+  animation: normal 1000ms ease-in;
+  animation-name: disable;
+  animation-fill-mode: forwards;
+}
+
+.aside.enable {
+  animation: normal 1000ms ease-in;
+  animation-name: enable;
+  animation-fill-mode: forwards;
+}
+
+@keyframes enable {
+  0% {
+    margin-left: -200px;
+    width: 200px;
+  }
+  100% {
+    margin-left: 0;
+    width: 200px;
+  }
+}
+
+@keyframes disable {
+  0% {
+    margin-left: 0;
+    width: 200px;
+  }
+  100% {
+    margin-left: -200px;
+    width: 200px;
+    display: none;
+  }
+}
+
+/*
+  .aside.active {
+    animation: normal 1000ms ease-in;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    0% {
+      margin-left: -200px;
+      width: 200px;
+    }
+    100% {
+      margin-left: 0;
+      width: 200px;
+    }
+  }
+  
+  @keyframes slideout {
+    0% {
+      margin-left: 0;
+      width: 200px;
+    }
+    100% {
+      margin-left: -200px;
+      width: 200px;
+    }
+  }
+  */
+
+.aside li {
+  font-size: 0.85em;
+  color: #888;
+}
+
+.aside li a {
+  padding: 6px 24px;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+}
+
+.aside li a:hover,
+.aside li a.active {
+  color: #ff5500;
+}
+
+.aside li a span {
+  margin: 0 0.5rem;
+}
+
+.aside li a svg {
+  color: #ff5500;
+}

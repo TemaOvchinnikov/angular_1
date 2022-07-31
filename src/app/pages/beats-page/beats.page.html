@@ -1,0 +1,5 @@
+<component-layout [title]="title" *ngIf="beats">
+    <div class="grid lg:grid-cols-2 lg:gap-6">
+        <component-cart-beats *ngFor="let beat of beats" [beat]="beat"></component-cart-beats>
+    </div>
+</component-layout>

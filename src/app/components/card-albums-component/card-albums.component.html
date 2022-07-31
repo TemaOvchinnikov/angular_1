@@ -1,0 +1,20 @@
+<!--<div class="card_albums">
+    {{album}}
+    <img src="./../assets/Artboard-52.png" alt="">
+    <div class="pt-3 pr-4 pb-4 pl-4">
+        <a href="#">
+            <h3 class="truncate">10 Freaky Girls</h3>
+            <p class="truncate">Metro Boomin Feat. 21 Savage</p>
+        </a>
+    </div>
+</div>-->
+
+<div class="card_albums" *ngIf="album">
+    <img [src]="album.image" alt="">
+    <div class="pt-3 pr-4 pb-4 pl-4">
+        <a [routerLink]="['/album', album.id]">
+            <h3 class="truncate">{{album.title}}</h3>
+            <p class="truncate">{{album.auhor}}</p>
+        </a>
+    </div>
+</div>

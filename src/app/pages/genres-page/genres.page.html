@@ -1,0 +1,5 @@
+<component-layout [title]="title" *ngIf="albums">
+    <div class="grid lg:grid-cols-4 lg:gap-6">
+        <component-card-albums *ngFor="let album of albums" [album]="album"></component-card-albums>
+    </div>
+</component-layout>

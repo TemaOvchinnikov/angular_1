@@ -1,0 +1,143 @@
+<aside class="aside w-51 bg-color-white-100 fixed top-16 left-0 h-full z-40">
+    <ul class="text-sm">
+        <li class="mx-6 mt-6 mb-2 text-sm">Albums</li>
+        <li><a routerLink="/albums" routerLinkActive="active" class="flex flex-row"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true" role="img" focusable="false" class="svg-icon"
+                    viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14.5c-2.49 0-4.5-2.01-4.5-4.5S9.51 7.5 12 7.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5zm0-5.5c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z">
+                    </path>
+                </svg><span>All albums</span></a></li>
+        <li class="mx-6 mt-6 mb-2">Beats &amp; tracks</li>
+        <li><a routerLink="/beats" routerLinkActive="active"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                    role="img" focusable="false" class="svg-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z">
+                    </path>
+                </svg><span>Beats</span></a></li>
+        <li><a routerLink="/tracks" routerLinkActive="active"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                    role="img" focusable="false" class="svg-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z">
+                    </path>
+                </svg><span>Tracks</span></a></li>
+        <li class="mx-6 mt-6 mb-2">Genres</li>
+
+        <ng-template [ngIf]="genres">
+            <li *ngFor="let genre of genres"><a [routerLink]="['/genre', genre.id]" routerLinkActive="active"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" role="img" focusable="false"
+                        class="svg-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 5h-3v5.5a2.5 2.5 0 0 1-5 0 2.5 2.5 0 0 1 2.5-2.5c.57 0 1.08.19 1.5.51V5h4v2zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z">
+                        </path>
+                    </svg><span>{{genre.title}}</span> </a></li>
+        </ng-template>
+
+        <li class="mx-6 mt-6 mb-2">Years</li>
+
+        <ng-template [ngIf]="years">
+            <li *ngFor="let year of years"><a [routerLink]="['/year', year.year]" routerLinkActive="active"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" role="img" focusable="false"
+                        class="svg-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z">
+                        </path>
+                    </svg><span>{{year.year}}</span> </a></li>
+        </ng-template>
+
+
+        <!--<li class="mx-6 mt-6 mb-2 text-sm">Albums</li>
+        <li><a href="#" class="flex flex-row"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" role="img"
+                    focusable="false" class="svg-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14.5c-2.49 0-4.5-2.01-4.5-4.5S9.51 7.5 12 7.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5zm0-5.5c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z">
+                    </path>
+                </svg><span>All albums</span></a></li>
+        <li class="mx-6 mt-6 mb-2">Beats &amp; tracks</li>
+        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" role="img" focusable="false"
+                    class="svg-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z">
+                    </path>
+                </svg><span>Beats</span></a></li>
+        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" role="img" focusable="false"
+                    class="svg-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z">
+                    </path>
+                </svg><span>Tracks</span></a></li>
+        <li class="mx-6 mt-6 mb-2">Genres</li>
+        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" role="img" focusable="false"
+                    class="svg-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 5h-3v5.5a2.5 2.5 0 0 1-5 0 2.5 2.5 0 0 1 2.5-2.5c.57 0 1.08.19 1.5.51V5h4v2zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z">
+                    </path>
+                </svg><span>Phonk house</span> </a></li>
+        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" role="img" focusable="false"
+                    class="svg-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 5h-3v5.5a2.5 2.5 0 0 1-5 0 2.5 2.5 0 0 1 2.5-2.5c.57 0 1.08.19 1.5.51V5h4v2zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z">
+                    </path>
+                </svg><span>Trap</span> </a></li>
+        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" role="img" focusable="false"
+                    class="svg-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 5h-3v5.5a2.5 2.5 0 0 1-5 0 2.5 2.5 0 0 1 2.5-2.5c.57 0 1.08.19 1.5.51V5h4v2zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z">
+                    </path>
+                </svg><span>Phonk</span> </a></li>
+        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" role="img" focusable="false"
+                    class="svg-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 5h-3v5.5a2.5 2.5 0 0 1-5 0 2.5 2.5 0 0 1 2.5-2.5c.57 0 1.08.19 1.5.51V5h4v2zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z">
+                    </path>
+                </svg><span>Dark techno</span> </a></li>
+        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" role="img" focusable="false"
+                    class="svg-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 5h-3v5.5a2.5 2.5 0 0 1-5 0 2.5 2.5 0 0 1 2.5-2.5c.57 0 1.08.19 1.5.51V5h4v2zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z">
+                    </path>
+                </svg><span>Electronic</span> </a></li>
+        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" role="img" focusable="false"
+                    class="svg-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 5h-3v5.5a2.5 2.5 0 0 1-5 0 2.5 2.5 0 0 1 2.5-2.5c.57 0 1.08.19 1.5.51V5h4v2zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z">
+                    </path>
+                </svg><span>Hip-hop &amp; rap</span></a></li>
+        <li class="mx-6 mt-6 mb-2">Years</li>
+        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" role="img" focusable="false"
+                    class="svg-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z">
+                    </path>
+                </svg><span>2022</span></a></li>
+        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" role="img" focusable="false"
+                    class="svg-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z">
+                    </path>
+                </svg><span>2021</span></a></li>
+        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" role="img" focusable="false"
+                    class="svg-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z">
+                    </path>
+                </svg><span>2020</span></a></li>-->
+    </ul>
+</aside>
