@@ -49,7 +49,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * `ng g component components/layout-component/layout --skip-tests --export --flat --prefix=component`
 * `ng g module components/layout-component`
 
-* `ng g component elements/name-element/name --skip-tests --export --type=kit --flat --prefix=element`
+* `ng g component elements/name-element/name --skip-tests --export --type=element --flat --prefix=element`
 * `ng g module elements/name-element`
 
 * `ng g component pages/name-page/name --skip-tests --export --type=page --flat --prefix=page`
