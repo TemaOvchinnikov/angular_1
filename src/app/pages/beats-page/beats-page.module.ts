@@ -13,6 +13,5 @@ import { BeatsPage } from './beats.page';
     LayoutComponentModule,
     CardBeatsComponentModule,
   ],
-  exports: [BeatsPage],
 })
 export class BeatsPageModule {}

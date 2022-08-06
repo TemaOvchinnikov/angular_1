@@ -13,6 +13,5 @@ import { GenresPage } from './genres.page';
     LayoutComponentModule,
     CardAlbumsComponentModule,
   ],
-  exports: [GenresPage],
 })
 export class GenresPageModule {}

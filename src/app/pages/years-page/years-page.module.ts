@@ -13,6 +13,5 @@ import { YearsPage } from './years.page';
     LayoutComponentModule,
     CardAlbumsComponentModule,
   ],
-  exports: [YearsPage],
 })
 export class YearsPageModule {}

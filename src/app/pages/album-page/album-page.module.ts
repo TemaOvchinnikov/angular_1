@@ -13,6 +13,5 @@ import { AlbumPage } from './album.page';
     LayoutComponentModule,
     CardAlbumsComponentModule,
   ],
-  exports: [AlbumPage],
 })
 export class AlbumPageModule {}
